@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    }
+    
+    .navbar {
+    background-color: #007BFF;
+    overflow: hidden;
+    position: relative;
+    padding: 14px 20px;
+    }
+    
+    .nav-items a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    }
+    
+    .nav-items a:hover {
+    background-color: #0056b3;
+    color: white;
+    }
+    
+    .nav-toggle {
+    display: none;
+    }
+    
+    .nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    }
+    
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+    display: block;
+    background-color: white;
+    height: 2px;
+    width: 25px;
+    position: relative;
+    transition: all 0.3s;
+    }
+    
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+    }
+    
+    .nav-toggle-label span::before {
+    top: -8px;
+    }
+    
+    .nav-toggle-label span::after {
+    top: 8px;
+    }
+    
+    @media screen and (max-width: 600px) {
+    .nav-items a {
+    display: none;
+    }
+    .nav-toggle-label {
+    display: block;
+    }
+    .nav-toggle:checked + .nav-toggle-label span {
+    transform: rotate(45deg);
+    }
+    .nav-toggle:checked + .nav-toggle-label span::before {
+    transform: rotate(90deg);
+    top: 0;
+    }
+    .nav-toggle:checked + .nav-toggle-label span::after {
+    transform: rotate(90deg);
+    top: 0;
+    }
+    .nav-toggle:checked ~ .nav-items a {
+    display: block;
+    float: none;
+    text-align: left;
+    padding-left: 20px;
+    }
+    }
