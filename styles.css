@@ -3,16 +3,18 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-}
-
-body {
+    }
+    
+    body {
     min-height: 100vh;
-    background: url("https://images.pexels.com/photos/2781760/pexels-photo-2781760.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background: url("https://img.freepik.com/free-photo/nature-tranquil-beauty-reflected-calm-water-generative-ai_188544-12798.jpg?w=1380&t=st=1719844499~exp=1719845099~hmac=d84e3e99ba935193aac0151a71194b19fa926c8cc094c560fcbd20270fcb1dd4");
     background-size: cover;
     background-position: center;
-}
-
-.header {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .header {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,30 +25,30 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-}
-
-.logo {
+    }
+    
+    .logo {
     font-size: 32px;
     color: #fff;
     text-decoration: none;
     font-weight: 700;
-}
-
-.navbar {
+    }
+    
+    .navbar {
     display: flex;
     align-items: center;
-}
-
-.navbar a {
+    }
+    
+    .navbar a {
     position: relative;
     font-size: 18px;
     color: #fff;
     font-weight: 500;
     text-decoration: none;
     margin-left: 40px;
-}
-
-.navbar a::before {
+    }
+    
+    .navbar a::before {
     content: '';
     position: absolute;
     top: 100%;
@@ -55,84 +57,98 @@ body {
     height: 2px;
     background: #fff;
     transition: .3s;
-}
-
-.navbar a:hover::before {
+    }
+    
+    .navbar a:hover::before {
     width: 100%;
-}
-
-.nav-toggle {
+    }
+    
+    .nav-toggle {
     display: none;
-}
-
-.nav-toggle-label {
+    }
+    
+    .nav-toggle-label {
     display: none;
     position: relative;
     cursor: pointer;
     width: 30px;
     height: 25px;
-}
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
+    }
+    
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
     display: block;
     position: absolute;
     width: 100%;
     height: 3px;
     background-color: #fff;
     transition: all 0.3s;
-}
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
+    }
+    
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
     content: '';
-}
-
-.nav-toggle-label span::before {
+    }
+    
+    .nav-toggle-label span::before {
     top: -8px;
-}
-
-.nav-toggle-label span::after {
+    }
+    
+    .nav-toggle-label span::after {
     top: 8px;
-}
-
-@media (max-width: 768px) {
+    }
+    
+    @media (max-width: 768px) {
     .header {
-        padding: 20px;
+    padding: 20px;
     }
     .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: rgba(0, 0, 0, 0.9);
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
     }
     .navbar a {
-        margin: 10px 0;
-        font-size: 24px;
+    margin: 10px 0;
+    font-size: 24px;
     }
     .nav-toggle:checked + .nav-toggle-label + .navbar {
-        transform: translateX(0);
+    transform: translateX(0);
     }
     .nav-toggle-label {
-        display: block;
+    display: block;
     }
     .nav-toggle:checked + .nav-toggle-label span {
-        background: transparent;
+    background: transparent;
     }
     .nav-toggle:checked + .nav-toggle-label span::before {
-        transform: rotate(45deg);
-        top: 0;
+    transform: rotate(45deg);
+    top: 0;
     }
     .nav-toggle:checked + .nav-toggle-label span::after {
-        transform: rotate(-45deg);
-        top: 0;
+    transform: rotate(-45deg);
+    top: 0;
     }
-}
+    }
+    
+    .main-content {
+    flex: 1;
+    padding: 100px 100px 20px;
+    color: #fff;
+    text-align: center;
+    }
+    
+    .footer {
+    padding: 20px 100px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    }
