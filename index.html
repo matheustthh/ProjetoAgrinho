@@ -1,40 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com"&gt;
-<link rel="preconnect" href="https://fonts.gstatic.com&quot; crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap&quot; rel="stylesheet">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Responsive Navbar</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agritech</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="flex flex-col min-h-100vh">
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="leaf-icon.svg" alt="Leaf Icon" class="icon">
+        <h2 class="sr-only">Agritech</h2>
+      </a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <nav class="nav">
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Contact Us</a>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="section">
+        <div class="container">
+          <div class="text">
+            <h2 class="title">Revolutionize Your Farm with Agritech</h2>
+            <p class="description">
+              Discover how cutting-edge technology can transform your agricultural operations, boost productivity, and ensure sustainable practices.
+            </p>
+          </div>
+          <img src="img/feirante1.jpg" alt="Agritech" class="image" id="img">
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="text-center">
+            <h2 class="title">Explore the Future of Farming</h2>
+            <p class="description">
+              From precision farming to autonomous drones, discover how technology is revolutionizing the agricultural industry.
+            </p>
+          </div>
+          <div class="carousel">
+            <input type="radio" name="carousel" id="slide1" checked>
+            <input type="radio" name="carousel" id="slide2">
+            <input type="radio" name="carousel" id="slide3">
 
-<header class="header">
-<div class="logo">
-<a href="#" class="logo">Logo</a>
-</div>
-<input type="checkbox" id="nav-toggle" class="nav-toggle">
-<label for="nav-toggle" class="nav-toggle-label">
-<span></span>
-</label>
-<nav class="navbar">
-<a href="#header">Início</a>
-<a href="#">Sobre</a>
-<a href="#">Projetos</a>
-<a href="#">Entre em contato</a>
-</nav>
-</header>
+            <div class="carousel-inner">
+              <div class="carousel-item">
+                <img src="img/feirante2.jpg" alt="Agritech Image 1" class="image">
+              </div>
+              <div class="carousel-item">
+                <img src="img/feirante3.jpg" alt="Agritech Image 2" class="image">
+              </div>
+              <div class="carousel-item">
+                <img src="img/feirante1.jpg" alt="Agritech Image 3" class="image">
+              </div>
+            </div>
 
-<main class="main-content">
-<h1>Os Koenigs</h1>
-<p>Site destinado a criação do Projeto Agrinho</p>
-</main>
-
-<footer class="footer">
-<p>&copy; Os Koenigs</p>
-</footer>
-
+            <div class="carousel-indicators">
+              <label for="slide1" class="indicator"></label>
+              <label for="slide2" class="indicator"></label>
+              <label for="slide3" class="indicator"></label>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-section">
+          <h3 class="footer-title">Contact Us</h3>
+          <p>123 Agritech Lane, Farmville, USA</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Email: info@agritech.com</p>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Quick Links</h3>
+          <a href="#" class="footer-link">About</a>
+          <a href="#" class="footer-link">Home</a>
+          <a href="#" class="footer-link">Contact Us</a>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Newsletter</h3>
+          <p>Stay up-to-date with the latest Agritech news.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" class="input">
+            <button type="submit" class="button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

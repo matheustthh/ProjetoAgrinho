@@ -1,154 +1,277 @@
-* {
+@font-face {
+    font-family: 'Geist';
+    src: url('fonts/Geist-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Geist';
+    src: url('fonts/Geist-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Geist';
+    src: url('fonts/Geist-Medium.otf');
+    font-weight: medium;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'Geist', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    }
-    
-    body {
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .flex-col {
+    flex-direction: column;
+  }
+  
+  .min-h-100vh {
     min-height: 100vh;
-    background: url("https://img.freepik.com/free-photo/nature-tranquil-beauty-reflected-calm-water-generative-ai_188544-12798.jpg?w=1380&t=st=1719844499~exp=1719845099~hmac=d84e3e99ba935193aac0151a71194b19fa926c8cc094c560fcbd20270fcb1dd4");
-    background-size: cover;
-    background-position: center;
+  }
+  
+  .header {
+    background-color: #18181B;
+    color: #fff;
+    padding: 0 16px;
     display: flex;
-    flex-direction: column;
-    }
-    
-    .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    z-index: 100;
-    }
-    
-    .logo {
-    font-size: 32px;
+    height: 56px;
+    position: relative;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    margin-left: 10rem;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 16px;
+    margin-left: auto;
+  }
+  
+  .nav-link {
     color: #fff;
     text-decoration: none;
-    font-weight: 700;
-    }
-    
-    .navbar {
-    display: flex;
-    align-items: center;
-    }
-    
-    .navbar a {
-    position: relative;
-    font-size: 18px;
-    color: #fff;
+    font-size: 14px;
     font-weight: 500;
-    text-decoration: none;
-    margin-left: 40px;
-    }
-    
-    .navbar a::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    transition: .3s;
-    }
-    
-    .navbar a:hover::before {
-    width: 100%;
-    }
-    
-    .nav-toggle {
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .menu-toggle {
     display: none;
-    }
-    
-    .nav-toggle-label {
+  }
+  
+  .menu-icon {
     display: none;
-    position: relative;
     cursor: pointer;
-    width: 30px;
-    height: 25px;
-    }
-    
-    .nav-toggle-label span,
-    .nav-toggle-label span::before,
-    .nav-toggle-label span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background-color: #fff;
-    transition: all 0.3s;
-    }
-    
-    .nav-toggle-label span::before,
-    .nav-toggle-label span::after {
-    content: '';
-    }
-    
-    .nav-toggle-label span::before {
-    top: -8px;
-    }
-    
-    .nav-toggle-label span::after {
-    top: 8px;
-    }
-    
-    @media (max-width: 768px) {
-    .header {
-    padding: 20px;
-    }
-    .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.9);
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    }
-    .navbar a {
-    margin: 10px 0;
     font-size: 24px;
-    }
-    .nav-toggle:checked + .nav-toggle-label + .navbar {
-    transform: translateX(0);
-    }
-    .nav-toggle-label {
-    display: block;
-    }
-    .nav-toggle:checked + .nav-toggle-label span {
-    background: transparent;
-    }
-    .nav-toggle:checked + .nav-toggle-label span::before {
-    transform: rotate(45deg);
-    top: 0;
-    }
-    .nav-toggle:checked + .nav-toggle-label span::after {
-    transform: rotate(-45deg);
-    top: 0;
-    }
-    }
-    
-    .main-content {
+    position: absolute;
+    right: 16px;
+  }
+  
+  .main {
     flex: 1;
-    padding: 100px 100px 20px;
+  }
+  
+  .section {
+    width: 100%;
+    padding: 48px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .text {
+    text-align: left;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #6c757d;
+  }
+  
+  .image {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-item {
+    width: 100%;
+    flex: 1 0 100%;
+  }
+  
+  .carousel input[type="radio"] {
+    display: none;
+  }
+  
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  .indicator {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+  }
+  
+  #slide1:checked ~ .carousel-inner {
+    transform: translateX(0%);
+  }
+  
+  #slide2:checked ~ .carousel-inner {
+    transform: translateX(-33.333%);
+  }
+  
+  #slide3:checked ~ .carousel-inner {
+    transform: translateX(-66.666%);
+  }
+  
+  #slide1:checked ~ .carousel-indicators label[for="slide1"],
+  #slide2:checked ~ .carousel-indicators label[for="slide2"],
+  #slide3:checked ~ .carousel-indicators label[for="slide3"] {
+    background-color: #717171;
+  }
+  
+  .footer {
+    background-color: #18181B;
     color: #fff;
-    text-align: center;
-    }
-    
-    .footer {
-    padding: 20px 100px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.8);
+    padding: 24px 0;
+    text-align: left;
+  }
+  
+  .footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+  }
+  
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .footer-title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .footer-link {
     color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .sr-only {
+    font-weight: medium;
+  }
+  
+  .input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .button {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #218838;
+  }
+  
+  #img {
+    height: 20rem;
+    width: 50%;
+  }
+  
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      position: absolute;
+      top: 56px;
+      left: 0;
+      right: 0;
+      background-color: #18181B;
+      display: none;
+      padding: 16px;
     }
+  
+    .nav-link {
+      margin-bottom: 8px;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    .menu-toggle:checked + .menu-icon + .nav {
+      display: flex;
+    }
+  
+    .logo {
+      margin-left: 0;
+    }
+  }
+  
