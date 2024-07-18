@@ -1,277 +1,290 @@
 @font-face {
-    font-family: 'Geist';
-    src: url('fonts/Geist-Regular.otf');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Geist';
-    src: url('fonts/Geist-Bold.otf');
-    font-weight: bold;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Geist';
-    src: url('fonts/Geist-Medium.otf');
-    font-weight: medium;
-    font-style: normal;
-  }
-  
-  body {
-    font-family: 'Geist', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .flex {
-    display: flex;
-  }
-  
-  .flex-col {
-    flex-direction: column;
-  }
-  
-  .min-h-100vh {
-    min-height: 100vh;
-  }
-  
-  .header {
-    background-color: #18181B;
-    color: #fff;
-    padding: 0 16px;
-    display: flex;
-    align-items: center;
-    height: 56px;
-    position: relative;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    margin-left: 10rem;
-  }
-  
-  .icon {
-    width: 24px;
-    height: 24px;
-  }
-  
+  font-family: 'Geist';
+  src: url('fonts/Geist-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Geist';
+  src: url('fonts/Geist-Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Geist';
+  src: url('fonts/Geist-Medium.otf');
+  font-weight: medium;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Geist', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.min-h-100vh {
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #18181B;
+  color: #fff;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  margin-left: 10rem;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  right: 16px;
+}
+
+.main {
+  flex: 1;
+}
+
+.section {
+  width: 100%;
+  padding: 48px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.text {
+  text-align: left;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.image {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 300%; /* Ensures the width is enough for three slides */
+}
+
+.carousel-item {
+  width: 100%;
+  flex: 0 0 100%; /* Ensures each item takes 100% of the width */
+}
+
+.carousel-image {
+  border-radius: 16px;
+  width: 20%;
+  height: auto;
+}
+
+.carousel input[type="radio"] {
+  display: none;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.indicator {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+#slide1:checked ~ .carousel-inner {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .carousel-inner {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel-inner {
+  transform: translateX(-200%);
+}
+
+#slide1:checked ~ .carousel-indicators label[for="slide1"],
+#slide2:checked ~ .carousel-indicators label[for="slide2"],
+#slide3:checked ~ .carousel-indicators label[for="slide3"] {
+  background-color: #717171;
+}
+
+.footer {
+  background-color: #18181B;
+  color: #fff;
+  padding: 24px 0;
+  text-align: left;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+}
+
+.sr-only {
+  font-weight: medium;
+}
+
+.input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.button {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #218838;
+}
+
+
+#img {
+  height: auto;
+}
+
+@media (max-width: 768px) {
   .nav {
-    display: flex;
-    gap: 16px;
-    margin-left: auto;
-  }
-  
-  .nav-link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-  }
-  
-  .nav-link:hover {
-    text-decoration: underline;
-  }
-  
-  .menu-toggle {
-    display: none;
-  }
-  
-  .menu-icon {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    position: absolute;
-    right: 16px;
-  }
-  
-  .main {
-    flex: 1;
-  }
-  
-  .section {
-    width: 100%;
-    padding: 48px 0;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  
-  .text {
-    text-align: left;
-  }
-  
-  .title {
-    font-size: 32px;
-    font-weight: 700;
-  }
-  
-  .description {
-    font-size: 16px;
-    color: #6c757d;
-  }
-  
-  .image {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-  
-  .carousel {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .carousel-item {
-    width: 100%;
-    flex: 1 0 100%;
-  }
-  
-  .carousel input[type="radio"] {
-    display: none;
-  }
-  
-  .carousel-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 16px;
-  }
-  
-  .indicator {
-    display: block;
-    width: 10px;
-    height: 10px;
-    background-color: #bbb;
-    border-radius: 50%;
-    margin: 0 4px;
-    cursor: pointer;
-  }
-  
-  #slide1:checked ~ .carousel-inner {
-    transform: translateX(0%);
-  }
-  
-  #slide2:checked ~ .carousel-inner {
-    transform: translateX(-33.333%);
-  }
-  
-  #slide3:checked ~ .carousel-inner {
-    transform: translateX(-66.666%);
-  }
-  
-  #slide1:checked ~ .carousel-indicators label[for="slide1"],
-  #slide2:checked ~ .carousel-indicators label[for="slide2"],
-  #slide3:checked ~ .carousel-indicators label[for="slide3"] {
-    background-color: #717171;
-  }
-  
-  .footer {
-    background-color: #18181B;
-    color: #fff;
-    padding: 24px 0;
-    text-align: left;
-  }
-  
-  .footer .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 32px;
-  }
-  
-  .footer-section {
-    display: flex;
     flex-direction: column;
-    gap: 8px;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background-color: #18181B;
+    display: none;
+    padding: 16px;
   }
-  
-  .footer-title {
-    font-size: 16px;
-    font-weight: 600;
+
+  .nav-link {
+    margin-bottom: 8px;
   }
-  
-  .footer-link {
-    color: #fff;
-    text-decoration: none;
+
+  .menu-icon {
+    display: block;
   }
-  
-  .footer-link:hover {
-    text-decoration: underline;
-  }
-  
-  .newsletter-form {
+
+  .menu-toggle:checked + .menu-icon + .nav {
     display: flex;
-    gap: 8px;
   }
-  
-  .sr-only {
-    font-weight: medium;
-  }
-  
-  .input {
-    flex: 1;
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-  }
-  
-  .button {
-    padding: 8px 16px;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #218838;
+
+  .logo {
+    margin-left: 0;
   }
   
   #img {
-    height: 20rem;
-    width: 50%;
+    width: 100%;
+    height: auto;
+    margin-bottom: -4rem;
   }
-  
-  @media (max-width: 768px) {
-    .nav {
-      flex-direction: column;
-      position: absolute;
-      top: 56px;
-      left: 0;
-      right: 0;
-      background-color: #18181B;
-      display: none;
-      padding: 16px;
-    }
-  
-    .nav-link {
-      margin-bottom: 8px;
-    }
-  
-    .menu-icon {
-      display: block;
-    }
-  
-    .menu-toggle:checked + .menu-icon + .nav {
-      display: flex;
-    }
-  
-    .logo {
-      margin-left: 0;
-    }
-  }
-  
+}
