@@ -17,6 +17,14 @@
   font-style: normal;
 }
 
+:root {
+  --green: #218838;
+  --bg: #18181B;
+  --white: #fff;
+  --greenInitial: #28a745;
+  --carouselColor: #717171;
+}
+
 body {
   font-family: 'Geist', sans-serif;
   margin: 0;
@@ -36,8 +44,8 @@ body {
 }
 
 .header {
-  background-color: #18181B;
-  color: #fff;
+  background-color: var(--bg);
+  color: var(--white);
   padding: 0 16px;
   display: flex;
   align-items: center;
@@ -65,7 +73,7 @@ body {
 }
 
 .nav-link {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
@@ -85,6 +93,10 @@ body {
   font-size: 24px;
   position: absolute;
   right: 16px;
+}
+.main-img {
+  justify-content: center;
+  align-items: center;
 }
 
 .main {
@@ -134,12 +146,12 @@ body {
 .carousel-inner {
   display: flex;
   transition: transform 0.5s ease;
-  width: 300%; /* Ensures the width is enough for three slides */
+  width: 300%; 
 }
 
 .carousel-item {
   width: 100%;
-  flex: 0 0 100%; /* Ensures each item takes 100% of the width */
+  flex: 0 0 100%;
 }
 
 .carousel-image {
@@ -183,12 +195,12 @@ body {
 #slide1:checked ~ .carousel-indicators label[for="slide1"],
 #slide2:checked ~ .carousel-indicators label[for="slide2"],
 #slide3:checked ~ .carousel-indicators label[for="slide3"] {
-  background-color: #717171;
+  background-color: var(--carouselColor);
 }
 
 .footer {
   background-color: #18181B;
-  color: #fff;
+  color: var(--white);
   padding: 24px 0;
   text-align: left;
 }
@@ -211,7 +223,7 @@ body {
 }
 
 .footer-link {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -238,20 +250,15 @@ body {
 
 .button {
   padding: 8px 16px;
-  background-color: #28a745;
-  color: #fff;
+  background-color: var(--greenInitial);
+  color: var(--white);
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .button:hover {
-  background-color: #218838;
-}
-
-
-#img {
-  height: auto;
+  background-color: var(--green);
 }
 
 @media (max-width: 768px) {
@@ -261,7 +268,7 @@ body {
     top: 56px;
     left: 0;
     right: 0;
-    background-color: #18181B;
+    background-color: var(--bg);
     display: none;
     padding: 16px;
   }
