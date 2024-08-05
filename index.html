@@ -8,10 +8,10 @@
 </head>
 <body>
   <div class="flex flex-col min-h-100vh">
-    <header class="header">
-      <a href="#" class="logo">
+    <header id="header_href" class="header">
+      <a href="#header_href" class="logo">
         <img src="leaf-icon.svg" alt="Leaf Icon" class="icon">
-        <h2 class="sr-only">Os Koenigs</h2>
+        <h2 class="">Os Koenigs</h2>
       </a>
       <input type="checkbox" id="menu-toggle" class="menu-toggle">
       <label for="menu-toggle" class="menu-icon">&#9776;</label>
@@ -25,52 +25,81 @@
       <section id="inicio" class="section">
         <div class="container">
           <div class="text">
-            <h2 class="title">Revolucione a agricultura com a ajuda de Os Koenigs</h2>
+            <h2 class="title">Conheça a história dos feirantes de Campo Mourão</h2>
             <h4 class="description">
-              Descubra como a tecnologia de ponta pode transformar suas operações agrícolas, aumentar a produtividade e garantir práticas sustentáveis.
+              Acompanhe a história dos feirantes de Campo Mourão
             </h4>
           </div>
-          <div class="main-img"><img src="img/feirante1.jpg" alt="Agritech" class="image" id="img"></div>
-        </div>
-      </section>
-      <section id="conteudo" class="section">
-        <div class="container">
-          <div class="text-center">
-            <h2 class="title">Descubra o Futuro da Agricultura Conosco</h2>
-            <h5 class="description">
-              Da agricultura de precisão aos drones autônomos, descubra como a tecnologia está revolucionando a indústria agrícola.
-            </h5>
-          </div>
-          <div class="carousel">
-            <input type="radio" name="carousel" id="slide1" checked>
-            <input type="radio" name="carousel" id="slide2">
-            <input type="radio" name="carousel" id="slide3">
-
-            <div class="carousel-inner">
-              <div class="carousel-item">
-                <img src="img/feirante2.jpg" alt="Agritech Feirante 1" class="carousel-image">
+          <main class="main">
+            <main class="container">
+              <section class="grid">
+                <div class="card">
+                  <a href="#" class="sr-only">Olhe</a>
+                  <img src="img/feirante1.jpg" alt="Precision Farming">
+                  <div class="card-content">
+                    <h3>Jailton</h3>
+                    <p style="font-size: 12px; height: 75px;">Jailton, feirante desde criança, começou ajudando seus pais a vender frutas e verduras. Hoje, ele cultiva e vende seus produtos, seguindo os passos dos pais como principal fonte de renda.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <a href="#" class="sr-only">Olhe</a>
+                  <img src="img/feirante2.jpg" alt="Autonomous Drones">
+                  <div class="card-content">
+                    <h3>Agnaldo</h3>
+                    <p style="font-size: 12px; height: 75px;">Agnaldo, 49, cultiva e vende legumes e verduras desde os 20 anos. Sua principal renda vem das feiras locais, onde é necessário cultivar o próprio produto e ter certificação estadual.</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <a href="#" class="sr-only">Olhe</a>
+                  <img src="img/feirante4.jpg" alt="Predictive Analytics">
+                  <div class="card-content">
+                    <h3>Lucélia</h3>
+                    <p style="font-size: 12px; height: 75px;">Lucélia produz cana de açúcar há mais de 10 anos, após trocar a venda de grãos de café pelo caldo de cana. Ela e seu marido desenvolvem o negócio gradualmente desde então.</p>
+                  </div>
+                </div>
+              </section>
+            </main>
+            <section id="conteudo" class="section">
+              <div class="container">
+                <div class="text-center">
+                  <h2 class="title">Descubra o Futuro da Agricultura Conosco</h2>
+                  <h5 class="description">
+                    Os Koenigs entrevistaram diversos feirantes, com diferentes pontos de vistas sobre a Agricultura!
+                  </h5>
+                </div>
+                <div class="carousel">
+                  <input type="radio" name="carousel" id="slide1" checked>
+                  <input type="radio" name="carousel" id="slide2">
+                  <input type="radio" name="carousel" id="slide3">
+      
+                  <div class="carousel-inner">
+                    <div class="carousel-item">
+                      <img src="img/feirante2.jpg" alt="Agritech Feirante 1" class="carousel-image">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/feirante3.jpg" alt="Agritech Feirante 2" class="carousel-image">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/feirante1.jpg" alt="Agritech Feirante 3" class="carousel-image">
+                    </div>
+                  </div>
+      
+                  <div class="carousel-indicators">
+                    <label for="slide1" class="indicator"></label>
+                    <label for="slide2" class="indicator"></label>
+                    <label for="slide3" class="indicator"></label>
+                  </div>
+                </div>
               </div>
-              <div class="carousel-item">
-                <img src="img/feirante3.jpg" alt="Agritech Feirante 2" class="carousel-image">
-              </div>
-              <div class="carousel-item">
-                <img src="img/feirante1.jpg" alt="Agritech Feirante 3" class="carousel-image">
-              </div>
-            </div>
-
-            <div class="carousel-indicators">
-              <label for="slide1" class="indicator"></label>
-              <label for="slide2" class="indicator"></label>
-              <label for="slide3" class="indicator"></label>
-            </div>
-          </div>
+            </section>
+          </main>
         </div>
       </section>
     </main>
     <footer id="footer-href" class="footer">
       <div class="container">
         <div class="footer-section">
-          <h3 class="footer-title"><a class="h3-link" href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRtsnXNcXMPjRVsNfkrjvPrkTgNxjPJhKBpPgPwzmBRwvkdSzlbHQlPwZSgrLsdBQlSqpbG">Contate-nos</a></h3>
+          <h3 class="footer-title"><a class="h3-link" target="_blank" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlFlwcprNjsbrJwsnxwZTHXTDswdssFsrHZvHbfKVwcsdMNQLZJCdlMrTcHbGzQMLZHNWg">Contate-nos</a></h3>
           <p>Campo Mourão, Paraná BR</p>
           <p>Telefone: (44) 99895-5623</p>
           <p>Email: eduardo.souza.luz@escola.pr.gov.br</p>
